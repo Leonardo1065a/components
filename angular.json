@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "components": {
+    "wave-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,14 +20,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/components",
+            "outputPath": "dist/wave-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "src/assets/scss/style.scss"],
-            "scripts": []
+            "scripts": ["src/assets/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -63,10 +63,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "components:build:production"
+              "browserTarget": "wave-ui:build:production"
             },
             "development": {
-              "browserTarget": "components:build:development"
+              "browserTarget": "wave-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "components:build"
+            "browserTarget": "wave-ui:build"
           }
         },
         "test": {
