@@ -1,0 +1,25 @@
+@use "variables";
+
+@function resolveRem($factor) {
+  @if $factor == 3 {
+    @return (variables.$gap-base * 2) * 2;
+  }
+
+  @if $factor == 4 {
+    @return (variables.$gap-base * 2) * 3;
+  }
+
+  @if $factor == 5 {
+    @return (variables.$gap-base * 2) * 6;
+  }
+
+  @return variables.$gap-base * $factor;
+}
+
+@function resolvePosition($position) {
+  @if $position == "between" or $position == "around" or $position == "evenly" {
+    @return space- + $position;
+  }
+
+  @return $position;
+}
