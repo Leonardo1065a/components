@@ -1,4 +1,4 @@
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar bg-body-tertiary d-md-none fixed-top">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -10,7 +10,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <a class="navbar-brand" href="#">Hi, There </a>
     <div
       class="offcanvas offcanvas-start"
       tabindex="-1"
@@ -18,7 +18,7 @@
       aria-labelledby="offcanvasNavbarLabel"
     >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hi, There</h5>
         <button
           type="button"
           class="btn-close"
@@ -67,3 +67,54 @@
     </div>
   </div>
 </nav>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+      <div class="position-sticky">
+        <button
+          class="btn btn-primary btn-sm d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+        >
+          Expandir Menu
+        </button>
+        <div class="collapse d-md-block" id="sidebarMenu">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="fas fa-home"></i>
+                <span class="d-md-none d-lg-inline">Página Inicial</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-chart-bar"></i>
+                <span class="d-md-none d-lg-inline">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="d-md-none d-lg-inline">Produtos</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-clipboard-list"></i>
+                <span class="d-md-none d-lg-inline">Pedidos</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Conteúdo do seu site vai aqui -->
+    </main>
+  </div>
+</div>
