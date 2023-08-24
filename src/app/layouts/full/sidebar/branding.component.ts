@@ -4,13 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-branding',
   template: `
     <div class="branding">
-      <a href="/">
+      <!-- <a href="/">
         <img
           src="./assets/images/logos/dark-logo.svg"
           class="align-middle m-2"
           alt="logo"
         />
-      </a>
+      </a> -->
+      <h1><a href="index.html" class="logo">M.</a></h1>
     </div>
   `,
 })

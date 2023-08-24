@@ -1,42 +1,30 @@
-<mat-sidenav-container
-  class="mainWrapper blue_theme  light-theme"
-  autosize
-  autoFocus
-  dir="ltr"
->
-  <!-- ============================================================== -->
-  <!-- Vertical Sidebar -->
-  <!-- ============================================================== -->
+<div class="wrapper d-flex align-items-stretch">
+  <app-sidebar [handleToggle]="handleToggle"></app-sidebar>
 
-  <mat-sidenav
-    #leftsidenav
-    [mode]="isOver ? 'over' : 'side'"
-    [opened]="!isOver"
-    (openedChange)="onSidenavOpenedChange($event)"
-    (closedStart)="onSidenavClosedStart()"
-    class="sidebarNav"
-  >
-    <app-sidebar></app-sidebar>
-  </mat-sidenav>
-  <!-- ============================================================== -->
-  <!-- Main Content -->
-  <!-- ============================================================== -->
-  <mat-sidenav-content class="contentWrapper">
-    <!-- ============================================================== -->
-    <!-- VerticalHeader -->
-    <!-- ============================================================== -->
+  <div class="contentWrapper">
+    <app-header (handleToggle)="handleToggle.next(null)"></app-header>
 
-    <app-header
-      [showToggle]="!isOver"
-      (toggleCollapsed)="toggleCollapsed()"
-      (toggleMobileNav)="sidenav.toggle()"
-    ></app-header>
-
-    <main class="pageWrapper">
-      <!-- ============================================================== -->
-      <!-- Outlet -->
-      <!-- ============================================================== -->
+    <main class="p-4 p-md-5 pageWrapper">
+      <h2 class="mb-4">Sidebar #07</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
       <router-outlet></router-outlet>
     </main>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+</div>
