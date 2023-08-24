@@ -1,5 +1,8 @@
 <div class="wrapper d-flex align-items-stretch">
-  <app-sidebar [handleToggle]="handleToggle"></app-sidebar>
+  <app-sidebar
+    class="d-none d-md-block"
+    [handleToggle]="handleToggle"
+  ></app-sidebar>
 
   <div class="contentWrapper">
     <app-header (handleToggle)="handleToggle.next(null)"></app-header>
