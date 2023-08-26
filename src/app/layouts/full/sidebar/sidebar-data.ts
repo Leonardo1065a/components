@@ -1,22 +1,29 @@
-import { NavItem } from './nav-item/nav-item';
+import { NavItem } from '../nav-item';
 
 export const navItems: NavItem[] = [
   {
-    navCap: 'Home',
-  },
-  {
-    displayName: 'Dashboard',
+    displayName: 'Home',
     iconName: 'fa-home',
-    route: '/dashboard',
+    route: '/home',
   },
   {
-    displayName: 'Login',
-    iconName: 'lock',
-    route: '/authentication/login',
+    displayName: 'User',
+    iconName: 'fa-user',
+    route: '/user',
   },
   {
-    displayName: 'Sample Page',
-    iconName: 'aperture',
-    route: '/extra/sample-page',
+    displayName: 'Notas',
+    iconName: 'fa-sticky-note',
+    route: '/notes',
+  },
+  {
+    displayName: 'Cogs',
+    iconName: 'fa-cogs',
+    route: '/cogs',
+  },
+  {
+    displayName: 'Plane',
+    iconName: 'fa-paper-plane',
+    route: '/plane',
   },
 ];
