@@ -1,7 +1,7 @@
 #sidebar {
   min-width: 270px;
   max-width: 270px;
-  background: #3e64ff;
+  background: #000;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -17,6 +17,7 @@
 }
 #sidebar.active ul.components li a {
   padding: 10px 0;
+  text-decoration: none;
 }
 #sidebar.active ul.components li a span {
   margin-right: 0;
@@ -31,7 +32,7 @@
 }
 #sidebar .logo {
   display: block;
-  color: #fff;
+  color: #000;
   font-weight: 900;
   padding: 10px 30px;
   -webkit-transition: 0.3s;
@@ -70,34 +71,18 @@
 #sidebar ul li a {
   padding: 10px 30px;
   display: block;
-  color: white;
+  color: #000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 #sidebar ul li a span {
   margin-right: 15px;
 }
-@media (max-width: 991.98px) {
-  #sidebar ul li a span {
-    display: block;
-  }
-}
 #sidebar ul li a:hover {
-  color: #fff;
+  color: #000;
 }
 #sidebar ul li.active > a {
   background: transparent;
-  color: #fff;
-}
-@media (max-width: 991.98px) {
-  #sidebar {
-    min-width: 80px;
-    max-width: 80px;
-    text-align: center;
-    margin-left: -80px !important;
-  }
-  #sidebar.active {
-    margin-left: 0 !important;
-  }
+  color: #000;
 }
 
 a[data-toggle="collapse"] {
@@ -114,12 +99,6 @@ a[data-toggle="collapse"] {
   transform: translateY(-50%);
 }
 
-@media (max-width: 991.98px) {
-  #sidebarCollapse span {
-    display: none;
-  }
-}
-
 //SIDEBAR
 .wrapper {
   width: 100%;
@@ -128,8 +107,7 @@ a[data-toggle="collapse"] {
 #sidebar {
   min-width: 270px;
   max-width: 270px;
-  background: blue;
-  color: #fff;
+  color: #000;
   transition: all 0.3s;
   &.active {
     min-width: 80px;
@@ -145,6 +123,10 @@ a[data-toggle="collapse"] {
             display: block;
             font-size: 24px;
           }
+
+          span.title {
+            display: none;
+          }
         }
       }
     }
@@ -159,7 +141,7 @@ a[data-toggle="collapse"] {
 
   .logo {
     display: block;
-    color: #fff;
+    color: #000;
     font-weight: 900;
     padding: 10px 30px;
     transition: 0.3s ease-in-out;
@@ -180,7 +162,7 @@ a[data-toggle="collapse"] {
       a {
         padding: 10px 30px;
         display: block;
-        color: rgba(255, 255, 255, 1);
+        color: #000;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         span {
           margin-right: 15px;
@@ -189,14 +171,15 @@ a[data-toggle="collapse"] {
             display: block;
           }
         }
+
         &:hover {
-          color: #fff;
+          color: #000;
         }
       }
       &.active {
         > a {
           background: transparent;
-          color: #fff;
+          color: #000;
         }
       }
     }
