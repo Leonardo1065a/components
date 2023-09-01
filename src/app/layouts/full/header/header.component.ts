@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { navItems } from '../sidebar/sidebar-data';
 
 @Component({
@@ -6,8 +6,6 @@ import { navItems } from '../sidebar/sidebar-data';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  @Output() handleToggle = new EventEmitter<any>();
-
   navItems = navItems;
 
   constructor() {}

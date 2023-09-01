@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
+import { BrandingComponent } from './layouts/full/header/branding.component';
 import { HeaderComponent } from './layouts/full/header/header.component';
-import { BrandingComponent } from './layouts/full/sidebar/branding.component';
 import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
 import { SidebarComponent } from './layouts/full/sidebar/sidebar.component';
 
