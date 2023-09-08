@@ -1,13 +1,11 @@
 import {
   Component,
   ElementRef,
-  EventEmitter,
-  Input,
   OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject } from 'rxjs';
 import { navItems } from './sidebar-data';
 
 @Component({
@@ -15,21 +13,17 @@ import { navItems } from './sidebar-data';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent implements OnInit, OnDestroy {
-  @Input() handleToggle: EventEmitter<any>;
-
   @ViewChild('sidebar') sidebar: ElementRef;
 
   private unsubscribe$ = new Subject();
+
+  _showBranding: boolean;
 
   navItems = navItems;
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.handleToggle.pipe(takeUntil(this.unsubscribe$)).subscribe(() => {
-      this.toggleClasse();
-    });
-  }
+  ngOnInit(): void {}
 
   toggleClasse() {
     try {
@@ -37,8 +31,10 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
       if (elemento.classList.contains('active')) {
         elemento.classList.remove('active');
+        this._showBranding = true;
       } else {
         elemento.classList.add('active');
+        this._showBranding = false;
       }
     } catch (error) {
       console.log(error);

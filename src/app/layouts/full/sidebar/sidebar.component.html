@@ -1,11 +1,11 @@
-<div class="flex-layout">
-  <app-branding></app-branding>
-  <div class="sidebar-list">
-    <nav id="sidebar" #sidebar class="active">
-      <ul class="list-unstyled components mb-5">
-        <app-nav-item *ngFor="let item of navItems" [item]="item">
-        </app-nav-item>
-      </ul>
-    </nav>
+<nav id="sidebar" #sidebar class="active bg-body-tertiary h-100">
+  <div class="toggle-menu">
+    <button type="button" class="btn btn-primary" (click)="toggleClasse()">
+      <i class="fa fa-bars"></i>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
   </div>
-</div>
+  <ul class="list-unstyled components mb-5">
+    <app-nav-item *ngFor="let item of navItems" [item]="item"> </app-nav-item>
+  </ul>
+</nav>
