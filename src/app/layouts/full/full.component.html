@@ -1,11 +1,8 @@
 <div class="wrapper d-flex align-items-stretch">
-  <app-sidebar
-    class="d-none d-md-block"
-    [handleToggle]="handleToggle"
-  ></app-sidebar>
+  <app-sidebar class="d-none d-md-block"></app-sidebar>
 
-  <div class="contentWrapper">
-    <app-header (handleToggle)="handleToggle.next(null)"></app-header>
+  <div class="contentWrapper" style="height: 100vh">
+    <app-header></app-header>
 
     <main class="p-4 p-md-5 pageWrapper">
       <h2 class="mb-4">Sidebar #07</h2>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-full',
@@ -6,7 +6,6 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class FullComponent implements OnInit {
-  handleToggle = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
