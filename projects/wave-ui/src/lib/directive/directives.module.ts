@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { WaveLoadingDirective } from './loading';
+import { WaveLoadingDirective } from './loading.directive';
 
 @NgModule({
   declarations: [WaveLoadingDirective],
